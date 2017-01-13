@@ -2,6 +2,7 @@ import './styles/app.scss';
 
 import * as React from "react";
 import * as ReactDOM from "react-dom";
+import { Button } from "@blueprintjs/core";
 
 interface AppProps {
   name: string
@@ -27,9 +28,12 @@ class App extends React.Component<AppProps, undefined> {
             <button className="pt-button pt-minimal pt-icon-user"></button>
             <button className="pt-button pt-minimal pt-icon-notifications"></button>
             <button className="pt-button pt-minimal pt-icon-cog"></button>
+            <Button iconName="refresh" className="pt-minimal" />
           </div>
         </nav>
-        <h1>{name}</h1>
+        <div style={{ padding: "10px 20px" }}>
+          <h1>{name}</h1>
+        </div>
       </div>
     );
   }
